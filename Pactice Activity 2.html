@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Portal</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <div class="badge">Academic Portal &bull; Term 2026–2027</div>
+            <h1>Student Profile Portal</h1>
+            <p>Welcome to my personal student profile and academic information portal.</p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#home">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#grades">Grades</a>
+            <a href="#registration">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside>
+            <h2>Quick Profile</h2>
+
+            <div class="profile-photo-wrapper">
+                <img src="c:\Users\LENOVO\Pictures\iPhone\IMG_4778.JPG" alt="Gelliel Ashley M. Dalisay" class="avatar-img" onerror="this.src='https://images.unsc:\Users\LENOVO\Pictures\iPhone\IMG_4778.JPGplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'">
+            </div>
+
+            <div class="profile-info">
+                <p><strong>Name:</strong> <span>Gelliel Ashley M. Dalisay</span></p>
+                <p><strong>Course:</strong> <span>Information Technology</span></p>
+                <p><strong>Year Level:</strong> <span>3rd Year</span></p>
+                <p><strong>Status:</strong> <span class="status-badge">Active Student</span></p>
+            </div>
+
+            <hr>
+
+            <h3>Quick Notes</h3>
+            <ul class="notes-list">
+                <li>Study regularly</li>
+                <li>Complete activities on time</li>
+                <li>Keep academic records updated</li>
+                <li>Stay Organized</li>
+                <li>Take a short break</li>
+                <li>Believe in yourself</li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <!-- SECTION A -->
+            <section id="profile">
+                <h2>About Me</h2>
+
+                <p>
+                    Olah! I am 
+                    <span class="highlight-name">Gelliel Ashley M. Dalisay</span>,
+                    a <b>3rd Year Information Technology</b> student who is passionate about learning, improving my skills, and gaining new experiences. 
+                    As a student, I am dedicated to my studies and committed to doing my best in every task and responsibility I take on.
+                     value hard work, consistency, and continuous learning. 
+                     
+                     I enjoy exploring new ideas, developing my skills, and working with others to achieve common goals. 
+                     I also believe that every challenge is an opportunity to grow and become a better version of myself.
+                </p>
+
+
+
+                <p>My goal is to <strong>continue building my knowledge and experience throughout my academic journey</strong> while preparing myself for future opportunities. 
+                <em>I strive to stay motivated, responsible, and focused on achieving my goals.</em></p>
+
+                <p><i><strong>"Turning goals int achievements, one step at a time."</strong></i></p>
+            </section>
+
+            <hr>
+
+            <!-- SECTION B -->
+            <section id="home">
+                <h2>Media &amp; Multimedia</h2>
+
+                <figure>
+                    <img src="https://t3.ftcdn.net/jpg/06/04/70/40/360_F_604704017_zHjlvfNLv06FIw2FulzbhwjOQeYUcGr3.jpg" alt="Student Profile Image" onerror="this.src='https://t3.ftcdn.net/jpg/06/04/70/40/360_F_604704017_zHjlvfNLv06FIw2FulzbhwjOQeYUcGr3.jpg'">
+                    <figcaption>
+                        A representation of a student learning and developing technology skills.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <hr>
+
+            <!-- ACADEMIC RECORD -->
+            <section id="grades">
+                <h2>Academic Record</h2>
+
+                <div class="table-responsive">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Subject</th>
+                                <th>Units</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td rowspan="5" class="student-cell">Gelliel Ashley  M. Dalisay</td>
+                                <td>Web Systems and Technologies</td>
+                                <td>3</td>
+                                <td>1.25</td>
+                            </tr>
+
+                            <tr>
+                                <td>Database Management System</td>
+                                <td>3</td>
+                                <td>1.50</td>
+                            </tr>
+
+                            <tr>
+                                <td>System Integration and Architecture</td>
+                                <td>3</td>
+                                <td>1.75</td>
+                            </tr>
+
+                            <tr>
+                                <td>Fundamentals in Business Analytics</td>
+                                <td>3</td>
+                                <td>1.50</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Fundamentals in Analytics Modeling</td>
+                                <td>3</td>
+                                <td>1.25</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="2"><strong>Total Units</strong></td>
+                                <td colspan="2"><strong>15 Units</strong></td>
+                            </tr>
+
+                            <tr class="gpa-row">
+                                <td colspan="2"><strong>Overall GPA</strong></td>
+                                <td colspan="2" class="gpa-val"><strong>1.45</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="registration">
+                <h2>Registration / Feedback Form</h2>
+
+                <form action="submit.php" method="post" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+
+                    <!-- FULL NAME -->
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                    <label for="telephone">Telephone Number:</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="09XXXXXXXXX" pattern="[0-9]{11}" required>
+
+                    <label for="course">Course Track:</label>
+                    <select id="course" name="course" required>
+                        <optgroup label="Computer Science">
+                            <option value="bs-cs">Bachelor of Science in Computer Science</option>
+                            <option value="bs-cs-data">Computer Science - Data Science</option>
+                        </optgroup>
+
+                        <optgroup label="Information Technology">
+                            <option value="bsit" selected>Bachelor of Science in Information Technology</option>
+                            <option value="bsit-web">Information Technology - Web Development</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="programming">Favorite Programming Language:</label>
+                    <input list="languages" id="programming" name="programming" placeholder="Select">
+
+                    <datalist id="languages">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="JavaScript">
+                        <option value="Python">
+                        <option value="Java">
+                        <option value="C++">
+                    </datalist>
+
+                    <label>Elective Choices:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="web development" name="electives" value="web development" checked>
+                            <span>Web Development</span>
+                        </label>
+                        
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="databases" name="electives" value="databases">
+                            <span>Database Management</span>
+                        </label>
+                        
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="data analytics" name="electives" value="data analytics">
+                            <span>Data Analytics</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="software engineering" name="electives" value="software engineering">
+                            <span>Software Engineering</span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="ui/ux designer" name="electives" value="ui/ux designer">
+                            <span>UI/UX Designer</span>
+                        </label>
+
+                        <label type="checkbox-item">
+                            <input type="checkbox" id="cybersecurity" name="electives" value="cybersecurity">
+                            <span>Cybersecurity</span>
+                        </label>
+                    </div>
+
+                    <label for="file">Upload File:</label>
+                    <div class="file-wrapper">
+                        <input type="file" id="file" name="file">
+                    </div>
+
+                    <label for="message">Feedback / Message:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Enter your feedback..."
+                    ></textarea>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn-primary">Submit</button>
+                        <button type="reset" class="btn-secondary">Reset</button>
+                    </div>
+
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Student Profile Portal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<style>
+    /* ==========================================================================
+       MODERN SANS-SERIF FONT & REFINED COLOR SYSTEM
+       ========================================================================== */
+    :root {
+        --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --primary: #2563eb;
+        --primary-hover: #1d4ed8;
+        --header-bg: #0f172a;
+        --nav-bg: #1e293b;
+        --border-color: #e2e8f0;
+        --border-subtle: #f1f5f9;
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 14px;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-main);
+        margin: 0;
+        background-color: var(--bg-page);
+        color: var(--text-main);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+        background-color: var(--header-bg);
+        color: #ffffff;
+        padding: 36px 20px;
+        text-align: center;
+        border-bottom: 2px solid #334155;
+    }
+
+    .header-inner {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .badge {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #93c5fd;
+        background: rgba(37, 99, 235, 0.2);
+        padding: 4px 12px;
+        border-radius: 9999px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(147, 197, 253, 0.25);
+    }
+
+    header h1 {
+        margin: 0 0 8px 0;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+    }
+
+    header p {
+        margin: 0;
+        color: #cbd5e1;
+        font-size: 15px;
+    }
+
+    nav {
+        background-color: var(--nav-bg);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 16px;
+        gap: 8px;
+    }
+
+    nav a {
+        color: #cbd5e1;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 12px 18px;
+        border-radius: var(--radius-sm);
+        transition: all 0.15s ease-in-out;
+    }
+
+    nav a:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.08);
+        text-decoration: none;
+    }
+
+    /* CONTAINER */
+    .container {
+        display: flex;
+        max-width: 1100px;
+        margin: 32px auto;
+        padding: 0 16px;
+        gap: 28px;
+        align-items: flex-start;
+    }
+
+    @media (max-width: 860px) {
+        .container {
+            flex-direction: column;
+            margin: 20px auto;
+        }
+    }
+
+    aside {
+        width: 300px;
+        flex-shrink: 0;
+        background-color: var(--bg-card);
+        padding: 24px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 860px) {
+        aside {
+            width: 100%;
+        }
+    }
+
+    aside h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-top: 0;
+        margin-bottom: 16px;
+        letter-spacing: -0.01em;
+    }
+
+    .profile-photo-wrapper {
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .avatar-img {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #e0e7ff;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .profile-info p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        margin: 8px 0;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .profile-info p:last-child {
+        border-bottom: none;
+    }
+
+    .profile-info strong {
+        color: var(--text-muted);
+        font-weight: 600;
+    }
+
+    .status-badge {
+        display: inline-block;
+        background: #ecfdf5;
+        color: #25ee80;
+        font-weight: 700;
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: 9999px;
+        border: 1px solid #a7f3d0;
+    }
+
+    aside hr {
+        border: 0;
+        border-top: 1px solid var(--border-color);
+        margin: 20px 0;
+    }
+
+    aside h3 {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text-main);
+        margin: 0 0 12px 0;
+    }
+
+    .notes-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .notes-list li {
+        position: relative;
+        padding-left: 22px;
+        font-size: 13px;
+        color: #475569;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+
+    .notes-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    main {
+        flex: 1;
+        background-color: var(--bg-card);
+        padding: 32px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-sm);
+        min-width: 0;
+    }
+
+    section {
+        margin-bottom: 32px;
+        scroll-margin-top: 70px;
+    }
+
+    section:last-of-type {
+        margin-bottom: 0;
+    }
+
+    section h2 {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--text-main);
+        margin-top: 0;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #f1f5f9;
+    }
+
+    main hr {
+        border: 0;
+        border-top: 1px solid var(--border-color);
+        margin: 32px 0;
+    }
+
+    #profile p {
+        font-size: 15px;
+        color: #334155;
+        margin-bottom: 14px;
+        line-height: 1.65;
+    }
+
+    .highlight-name {
+        border: 1px solid #bfdbfe;
+        background-color: #eff6ff;
+        color: #1e40af;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-weight: 600;
+    }
+
+    figure {
+        margin: 16px 0 0 0;
+        text-align: center;
+        background: white;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 5px;
+    }
+
+    figure img {
+        width: 50%;
+        max-width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 640px) {
+        figure img {
+            height: 220px;
+        }
+    }
+
+    figcaption {
+        margin-top: 15px;
+        font-style: italic;
+        font-size: 14px;
+        color: black
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 14px;
+        background-color: lightgoldenrodyellow;
+    }
+
+    table, th, td {
+        border: none;
+    }
+
+    th {
+        background-color: #0f172a;
+        color: #ffffff;
+        padding: 12px 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+    }
+
+    td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border-color);
+        color: #334155;
+    }
+
+    tbody tr:hover {
+        background-color: #f8fafc;
+    }
+
+    .student-cell {
+        background-color: #f8fafc;
+        font-weight: 700;
+        color: #0f172a;
+        border-right: 1px solid var(--border-color);
+        vertical-align: middle;
+    }
+
+    tfoot tr td {
+        padding: 12px 16px;
+    }
+
+    .total-row {
+        background-color: #f1f5f9;
+        border-top: 2px solid var(--border-color);
+    }
+
+    .gpa-row {
+        background-color: #eff6ff;
+        border-top: 1px solid #bfdbfe;
+    }
+
+    .gpa-val {
+        color: var(--primary);
+        font-family: var(--font-mono);
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    form {
+        margin-top: 16px;
+    }
+
+    label {
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 6px;
+        font-weight: 600;
+        font-size: 13px;
+        color: #334155;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #cbd5e1;
+        border-radius: var(--radius-sm);
+        font-family: inherit;
+        font-size: 14px;
+        color: var(--text-main);
+        background-color: #ffffff;
+        transition: all 0.15s ease-in-out;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        outline: none;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+    }
+
+    .checkbox-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        background-color: #f8fafc;
+        border: 1px solid var(--border-color);
+        padding: 8px 14px;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 13px;
+        transition: all 0.15s;
+    }
+
+    .checkbox-item:hover {
+        background-color: #eff6ff;
+        border-color: #bfdbfe;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        cursor: pointer;
+        accent-color: var(--primary);
+        margin: 0;
+    }
+
+    .file-wrapper {
+        margin-top: 6px;
+    }
+
+    input[type="file"] {
+        font-size: 13px;
+        color: #64748b;
+        padding: 8px 0;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .button-group {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+    }
+
+    button {
+        padding: 10px 22px;
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: #ffffff;
+        border: 1px solid transparent;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--primary-hover);
+    }
+
+    .btn-secondary {
+        background-color: #ffffff;
+        color: #475569;
+        border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+        background-color: #f1f5f9;
+        color: #1e293b;
+    }
+
+    footer {
+        text-align: center;
+        background-color: var(--header-bg);
+        color: #94a3b8;
+        padding: 24px 16px;
+        margin-top: 48px;
+        border-top: 1px solid #334155;
+        font-size: 13px;
+    }
+
+    footer p {
+        margin: 1;
+    }
+</style>
