@@ -5,13 +5,12 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+    background: #f4f6fb;
+    color: #222;
+    min-height: 100vh;
 }
-
 
 /* =========================
    HEADER
@@ -19,142 +18,294 @@ body {
 
 .header {
     text-align: center;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding: 70px 20px 60px;
+    background: linear-gradient(135deg, #315efb, #5b7cff);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
 }
 
+.header::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    top: -130px;
+    left: -70px;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    bottom: -200px;
+    right: -100px;
+}
 
 .header h1 {
-    font-size: 40px;
+    position: relative;
+    z-index: 1;
+
+    font-size: 42px;
     font-weight: 700;
-    color: #222222;
-    margin-bottom: 18px;
-}
+    letter-spacing: -0.5px;
 
-
-.members {
-    font-size: 16px;
-    color: #555555;
-}
-
-.container {
-    width: 70%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.section {
-    margin-bottom: 45px;
-}
-
-
-.section-heading {
-    border-left: 5px solid #315efb;
-    padding-left: 12px;
     margin-bottom: 15px;
 }
 
+.members {
+    position: relative;
+    z-index: 1;
+
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 50px auto 70px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    margin-bottom: 48px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 18px;
+    padding-left: 15px;
+
+    border-left: 5px solid #315efb;
+}
 
 .section-heading h2 {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 700;
-    color: #344b8e;
+    color: #263b78;
 }
+
+/* =========================
+   ACTIVITY CARD
+========================= */
 
 .activity {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 22px 25px;
+    gap: 25px;
 
-    margin-bottom: 8px;
+    padding: 23px 25px;
+    margin-bottom: 12px;
 
-    border: 1px solid #eeeeee;
-    border-radius: 3px;
+    background: #ffffff;
 
-    background-color: #ffffff;
+    border: 1px solid #e6e9f0;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(30, 50, 100, 0.05);
+
+    transition: all 0.25s ease;
 }
+
+.activity:hover {
+    transform: translateY(-3px);
+
+    border-color: #d3dcfa;
+
+    box-shadow: 0 10px 25px rgba(30, 50, 100, 0.10);
+}
+
+/* =========================
+   ACTIVITY DETAILS
+========================= */
 
 .activity-details {
-    padding-left: 5px;
+    padding-left: 2px;
 }
-
 
 .activity-details h3 {
     font-size: 16px;
     font-weight: 600;
 
-    color: #344b8e;
+    color: #263b78;
 
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
-
 
 .activity-details p {
-    font-size: 14px;
-    color: #999999;
+    font-size: 13px;
+
+    color: #8b919f;
+
+    line-height: 1.5;
 }
 
+/* =========================
+   VIEW BUTTON
+========================= */
 
 .view-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    background-color: #315efb;
+    min-width: 105px;
 
+    padding: 11px 18px;
+
+    background: #315efb;
     color: #ffffff;
 
     text-decoration: none;
 
-    padding: 11px 18px;
-
-    border-radius: 3px;
+    border-radius: 7px;
 
     font-size: 13px;
-
     font-weight: 600;
 
-    transition: background-color 0.2s ease;
-}
+    white-space: nowrap;
 
+    transition: all 0.2s ease;
+}
 
 .view-button:hover {
-    background-color: #2349d8;
+    background: #2349d8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 14px rgba(49, 94, 251, 0.25);
 }
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 768px) {
 
-    .container {
-        width: 90%;
+    .header {
+        padding: 55px 20px 45px;
     }
-
 
     .header h1 {
         font-size: 32px;
     }
 
-
     .members {
-        font-size: 14px;
-        padding: 0 15px;
-        line-height: 1.5;
+        font-size: 13px;
+        padding: 0 10px;
     }
 
+    .container {
+        width: 90%;
+        margin-top: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
 
     .activity {
-        padding: 18px;
+        padding: 20px;
+        gap: 15px;
     }
-
 
     .activity-details h3 {
         font-size: 15px;
     }
 
-
-    .view-button {
-        padding: 10px 14px;
+    .activity-details p {
         font-size: 12px;
     }
 
+    .view-button {
+        min-width: 90px;
+        padding: 10px 14px;
+        font-size: 12px;
+    }
 }
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .header {
+        padding: 45px 18px 40px;
+    }
+
+    .header h1 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    .members {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 92%;
+        margin: 30px auto 50px;
+    }
+
+    .section {
+        margin-bottom: 35px;
+    }
+
+    .section-heading {
+        padding-left: 12px;
+        border-left-width: 4px;
+    }
+
+    .section-heading h2 {
+        font-size: 17px;
+    }
+
+    .activity {
+        padding: 17px;
+        gap: 12px;
+        border-radius: 8px;
+    }
+
+    .activity-details {
+        flex: 1;
+    }
+
+    .activity-details h3 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .activity-details p {
+        font-size: 11px;
+    }
+
+    .view-button {
+        min-width: auto;
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+}
+
 </style>
