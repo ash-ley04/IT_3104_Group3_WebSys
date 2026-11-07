@@ -53,7 +53,7 @@
     <header class="header">
         <div class="aurora" aria-hidden="true"><i></i><i></i></div>
 
-        <h1>The THIRD Byte</h1>
+        <h1>Group 3 - IT 3104</h1>
 
         <p class="members">
             <span><i>GD</i>Gelliel Ashley Dalisay</span>
@@ -161,7 +161,7 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
-            <div class="brand"><span class="brand-dot"></span>The THIRD Byte</div>
+            <div class="brand"><span class="brand-dot"></span>Group 3 - IT 3104</div>
             <p class="footer-members">Gelliel Ashley Dalisay &middot; Mikko Ronce Labitan &middot; Edz Margaret Untiveros</p>
             <p class="footer-copy">&copy; 2026 Group 3 - IT 3104</p>
         </div>
@@ -169,6 +169,14 @@
 
     <button class="to-top" id="toTop" type="button" aria-label="Back to top">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <!-- MUSIC -->
+    <audio id="bgm" src="music.mp3" loop preload="none"></audio>
+
+    <button class="sound-btn" id="soundBtn" type="button" aria-label="Play music" aria-pressed="false">
+        <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="sound-label" id="soundLabel">Music</span>
     </button>
 
     <script>
@@ -354,6 +362,58 @@
 
         toTop.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        /* ---------- Music + click sounds ---------- */
+        var bgm = document.getElementById("bgm");
+        var soundBtn = document.getElementById("soundBtn");
+        var soundLabel = document.getElementById("soundLabel");
+        var audioCtx;
+
+        bgm.volume = 0.35;
+
+        function setSound(on) {
+            soundBtn.classList.toggle("on", on);
+            soundBtn.setAttribute("aria-pressed", on);
+            soundBtn.setAttribute("aria-label", on ? "Pause music" : "Play music");
+            soundLabel.textContent = on ? "Playing" : "Music";
+        }
+
+        soundBtn.addEventListener("click", function () {
+            if (bgm.paused) {
+                bgm.play().then(function () {
+                    setSound(true);
+                }).catch(function () {
+                    soundLabel.textContent = "music.mp3 not found";
+                });
+            } else {
+                bgm.pause();
+                setSound(false);
+            }
+        });
+
+        /* soft blip made with the Web Audio API (no file needed) */
+        function blip(freq) {
+            if (bgm.paused) return;
+            try {
+                audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+                var o = audioCtx.createOscillator();
+                var g = audioCtx.createGain();
+                var t = audioCtx.currentTime;
+                o.type = "sine";
+                o.frequency.value = freq;
+                g.gain.setValueAtTime(0.0001, t);
+                g.gain.exponentialRampToValueAtTime(0.08, t + 0.01);
+                g.gain.exponentialRampToValueAtTime(0.0001, t + 0.15);
+                o.connect(g);
+                g.connect(audioCtx.destination);
+                o.start();
+                o.stop(t + 0.16);
+            } catch (err) {}
+        }
+
+        document.addEventListener("click", function (e) {
+            if (e.target.closest(".view-button, .chip, .theme-toggle, .to-top")) blip(780);
         });
     </script>
 
