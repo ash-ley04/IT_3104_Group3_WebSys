@@ -1,311 +1,77 @@
-<style>
+/* General Settings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body / Outside Background */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6fb;
-    color: #222;
     min-height: 100vh;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.header {
-    text-align: center;
-    padding: 70px 20px 60px;
-    background: linear-gradient(135deg, #315efb, #5b7cff);
-    color: #ffffff;
-    position: relative;
-    overflow: hidden;
-}
-
-.header::before {
-    content: "";
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    top: -130px;
-    left: -70px;
-}
-
-.header::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 50%;
-    bottom: -200px;
-    right: -100px;
-}
-
-.header h1 {
-    position: relative;
-    z-index: 1;
-
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-
-    margin-bottom: 15px;
-}
-
-.members {
-    position: relative;
-    z-index: 1;
-
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.9);
-
-    line-height: 1.7;
-    letter-spacing: 0.3px;
-}
-
-/* =========================
-   MAIN CONTAINER
-========================= */
-
-.container {
-    width: 85%;
-    max-width: 1000px;
-    margin: 50px auto 70px;
-}
-
-/* =========================
-   SECTION
-========================= */
-
-.section {
-    margin-bottom: 48px;
-}
-
-.section-heading {
     display: flex;
-    align-items: center;
-
-    margin-bottom: 18px;
-    padding-left: 15px;
-
-    border-left: 5px solid #315efb;
-}
-
-.section-heading h2 {
-    font-size: 21px;
-    font-weight: 700;
-    color: #263b78;
-}
-
-/* =========================
-   ACTIVITY CARD
-========================= */
-
-.activity {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 25px;
-
-    padding: 23px 25px;
-    margin-bottom: 12px;
-
-    background: #ffffff;
-
-    border: 1px solid #e6e9f0;
-    border-radius: 10px;
-
-    box-shadow: 0 4px 15px rgba(30, 50, 100, 0.05);
-
-    transition: all 0.25s ease;
-}
-
-.activity:hover {
-    transform: translateY(-3px);
-
-    border-color: #d3dcfa;
-
-    box-shadow: 0 10px 25px rgba(30, 50, 100, 0.10);
-}
-
-/* =========================
-   ACTIVITY DETAILS
-========================= */
-
-.activity-details {
-    padding-left: 2px;
-}
-
-.activity-details h3 {
-    font-size: 16px;
-    font-weight: 600;
-
-    color: #263b78;
-
-    margin-bottom: 7px;
-}
-
-.activity-details p {
-    font-size: 13px;
-
-    color: #8b919f;
-
-    line-height: 1.5;
-}
-
-/* =========================
-   VIEW BUTTON
-========================= */
-
-.view-button {
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-
-    min-width: 105px;
-
-    padding: 11px 18px;
-
-    background: #315efb;
-    color: #ffffff;
-
-    text-decoration: none;
-
-    border-radius: 7px;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    transition: all 0.2s ease;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
 }
 
-.view-button:hover {
-    background: #2349d8;
-
-    transform: translateY(-1px);
-
-    box-shadow: 0 6px 14px rgba(49, 94, 251, 0.25);
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 650px;
+    padding: 55px 35px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid #555;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
-/* =========================
-   TABLET
-========================= */
+/* Heading */
+h1 {
+    margin-bottom: 25px;
+    color: navy;
+    font-size: 32px;
+}
 
-@media (max-width: 768px) {
+/* Message */
+p {
+    margin-bottom: 28px;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.6;
+}
 
-    .header {
-        padding: 55px 20px 45px;
-    }
+/* Buttons */
+button {
+    padding: 13px 22px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: navy;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    .header h1 {
-        font-size: 32px;
-    }
+/* Button Hover Effect */
+button:hover {
+    background-color: #25258c;
+}
 
-    .members {
-        font-size: 13px;
-        padding: 0 10px;
-    }
-
+/* Responsive Design */
+@media (max-width: 480px) {
     .container {
-        width: 90%;
-        margin-top: 38px;
+        padding: 40px 20px;
     }
 
-    .section-heading h2 {
-        font-size: 19px;
+    h1 {
+        font-size: 25px;
     }
 
-    .activity {
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .activity-details h3 {
+    p {
         font-size: 15px;
     }
-
-    .activity-details p {
-        font-size: 12px;
-    }
-
-    .view-button {
-        min-width: 90px;
-        padding: 10px 14px;
-        font-size: 12px;
-    }
 }
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 500px) {
-
-    .header {
-        padding: 45px 18px 40px;
-    }
-
-    .header h1 {
-        font-size: 27px;
-        line-height: 1.2;
-    }
-
-    .members {
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    .container {
-        width: 92%;
-        margin: 30px auto 50px;
-    }
-
-    .section {
-        margin-bottom: 35px;
-    }
-
-    .section-heading {
-        padding-left: 12px;
-        border-left-width: 4px;
-    }
-
-    .section-heading h2 {
-        font-size: 17px;
-    }
-
-    .activity {
-        padding: 17px;
-        gap: 12px;
-        border-radius: 8px;
-    }
-
-    .activity-details {
-        flex: 1;
-    }
-
-    .activity-details h3 {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .activity-details p {
-        font-size: 11px;
-    }
-
-    .view-button {
-        min-width: auto;
-        padding: 9px 11px;
-        font-size: 11px;
-    }
-}
-
-</style>
